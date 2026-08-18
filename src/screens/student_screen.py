@@ -1,6 +1,16 @@
 import streamlit as st
 
+from src.screens.home_screen import home_screen
 
-def student_screen():
-    st.title("Student Portal")
-    st.write("Student Portal - Coming Soon")
+
+def main():
+    st.set_page_config(
+        page_title="SnapClass - Making Attendance Faster Using AI",
+        page_icon="https://i.ibb.co/YTYGn5qV/logo.png"
+    )
+
+    home_screen()
+
+
+if __name__ == "__main__":
+    main()
