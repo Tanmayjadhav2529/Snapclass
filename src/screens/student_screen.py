@@ -1,16 +1,27 @@
 import streamlit as st
 
-from src.screens.home_screen import home_screen
+from src.ui.base_layout import style_background_dashboard, style_base_layout
+
+from src.components.header import header_dashboard
+from src.components.footer import footer_dashboard
 
 
-def main():
-    st.set_page_config(
-        page_title="SnapClass - Making Attendance Faster Using AI",
-        page_icon="https://i.ibb.co/YTYGn5qV/logo.png"
-    )
+def student_screen():
 
-    home_screen()
+    style_background_dashboard()
+    style_base_layout()
 
+    c1, c2 = st.columns(2, vertical_alignment='center', gap='xxlarge')
+    with c1:
+        header_dashboard()
+    with c2:
+        if st.button("Go back to Home", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
+            st.session_state['login_type'] = None
+            st.rerun()
 
-if __name__ == "__main__":
-    main()
+    st.header('Login using FaceID', text_alignment='center')
+    st.space()
+    st.space()
+
+    st.camera_input("Position your face in the center")
+    footer_dashboard()
