@@ -19,3 +19,7 @@ segno
 pillow
 
 
+speechbrain
+torch
+torchaudio
+
