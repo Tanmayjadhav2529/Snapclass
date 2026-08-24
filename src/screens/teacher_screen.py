@@ -8,6 +8,7 @@ from src.components.footer import footer_dashboard
 from src.database.db import check_teacher_exists, create_teacher, teacher_login, get_teacher_subjects
 from src.components.dialog import create_subject_dialog
 from src.components.subject_card import subject_card
+from src.components.dialog_share_subject import share_subject_dialog
 
 
 def teacher_screen():
@@ -97,10 +98,6 @@ def teacher_dashboard():
 
 def teacher_tab_take_attendance():
     st.header('Take AI Attendance')
-
-
-def share_subject_dialog(subject_name, subject_code):
-    st.info(f"Share code for **{subject_name}**: `{subject_code}`")
 
 
 def get_attendance_for_teacher(teacher_id):
