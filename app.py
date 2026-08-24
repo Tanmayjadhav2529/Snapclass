@@ -8,6 +8,7 @@ from src.screens.student_screen import student_screen
 
 
 
+
 def main():
     st.set_page_config(
         page_title='SnapClass - Making Attendance faster using AI',
