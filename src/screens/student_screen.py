@@ -6,7 +6,12 @@ import streamlit as st
 from src.components.subject_card import subject_card
 from src.components.footer import footer_dashboard
 from src.components.header import header_dashboard
-from src.database.db import create_student, get_all_students
+from src.database.db import (
+    create_student,
+    get_all_students,
+    get_student_subjects,
+    unenroll_student_from_subject,
+)
 from src.pipelines.face_pipeline import (
     get_face_embeddings,
     predict_attendance,
@@ -69,8 +74,8 @@ def student_dashboard():
         stats = stats_map.get(sid,{"total":0, "attended": 0} )
         def unenroll_button():
                 if st.button("Unenroll from tihs course", type='tertiary', width='stretch', icon=':material/delete_forever:'):
-                    unenroll_student_to_subject(student_id, sid)
-                    st.toast(f'Unenrolled from {sub['name']} successfully!')
+                    unenroll_student_from_subject(student_id, sid)
+                    st.toast(f"Unenrolled from {sub['name']} successfully!")
                     st.rerun()
 
         with cols[i % 2]:
