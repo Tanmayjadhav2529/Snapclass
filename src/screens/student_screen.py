@@ -145,7 +145,8 @@ def student_dashboard():
                     "Unenroll from this course",
                     type="tertiary",
                     width="stretch",
-                    icon=":material/delete_forever:"
+                    icon=":material/delete_forever:",
+                    key=f"unenroll_{subject_id}"
                 ):
 
                     unenroll_student_from_subject(
