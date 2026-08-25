@@ -6,7 +6,7 @@ SnapClass helps teachers record classroom attendance quickly by identifying enro
 
 ## Live Demo
 
-[Open SnapClass](https://ai-snapclasses.streamlit.app/)
+[Open SnapClass](https://snapclass-landing-page-liard.vercel.app/)
 
 ## Features
 
