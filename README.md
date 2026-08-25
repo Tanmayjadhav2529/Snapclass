@@ -2,6 +2,8 @@
 
 Face and voice recognition based attendance for classrooms, powered by Streamlit and Supabase.
 
+SnapClass helps teachers record classroom attendance quickly by identifying enrolled students through classroom photos or recorded audio, while giving students an easy way to join subjects and view their attendance records.
+
 ## Live Demo
 
 [Open SnapClass](https://ai-snapclasses.streamlit.app/)
@@ -94,10 +96,6 @@ streamlit run app.py
 │   └── ui/                        # Shared layout and styling helpers
 └── README.md
 ```
-
-## Screenshots
-
-_Add screenshots or GIFs showing the application in action here._
 
 ## License
 
